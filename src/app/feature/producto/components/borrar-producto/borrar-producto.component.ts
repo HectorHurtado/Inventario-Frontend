@@ -6,8 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-borrar-producto',
-  templateUrl: './borrar-producto.component.html',
-  styleUrls: ['./borrar-producto.component.css']
+  templateUrl: './borrar-producto.component.html'
 })
 export class BorrarProductoComponent implements OnInit {
 

@@ -20,8 +20,7 @@ export class MovimientoService {
     return this.http.doPost<Movimiento, boolean>(`${environment.endpoint}/movimientos`, movimiento,
                                                 this.http.optsName('crear/actualizar movimientos')).pipe(
                                                   catchError(err => {
-                                                    console.log('Error', err);
-                                                    alert('Error creando movimiento');
+                                                    alert('Error creando movimiento' + err);
                                                     return [];
                                                   })
                                                 );

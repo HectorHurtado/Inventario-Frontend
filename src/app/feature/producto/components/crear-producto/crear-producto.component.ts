@@ -9,8 +9,7 @@ const LONGITUD_MINIMA_PERMITIDA_NUMERO = 1;
 
 @Component({
   selector: 'app-crear-producto',
-  templateUrl: './crear-producto.component.html',
-  styleUrls: ['./crear-producto.component.css']
+  templateUrl: './crear-producto.component.html'
 })
 export class CrearProductoComponent implements OnInit {
   productoForm: FormGroup;
@@ -46,7 +45,7 @@ export class CrearProductoComponent implements OnInit {
       nombre: new FormControl('', [Validators.required, Validators.minLength(LONGITUD_MINIMA_PERMITIDA_TEXTO),
         Validators.maxLength(LONGITUD_MAXIMA_PERMITIDA_TEXTO)]),
       precioCompra: new FormControl('', [Validators.required, Validators.min(LONGITUD_MINIMA_PERMITIDA_NUMERO)]),
-      stock: new FormControl('', [Validators.required, , Validators.min(LONGITUD_MINIMA_PERMITIDA_NUMERO)]),
+      stock: new FormControl('', [Validators.required, Validators.min(LONGITUD_MINIMA_PERMITIDA_NUMERO)]),
       fechaCreacion: new FormControl(formatDate(new Date(),'yyyy-MM-ddTHH:mm:ss','en'))
     });
   }

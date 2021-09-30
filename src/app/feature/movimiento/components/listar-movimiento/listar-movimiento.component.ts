@@ -7,8 +7,7 @@ import { Movimiento } from '../../shared/model/movimiento';
 
 @Component({
   selector: 'app-listar-movimiento',
-  templateUrl: './listar-movimiento.component.html',
-  styleUrls: ['./listar-movimiento.component.css']
+  templateUrl: './listar-movimiento.component.html'
 })
 export class ListarMovimientoComponent implements OnInit {
  

@@ -8,8 +8,7 @@ import { formatDate } from '@angular/common';
 
 @Component({
   selector: 'app-consultar-ganancia',
-  templateUrl: './consultar-ganancia.component.html',
-  styleUrls: ['./consultar-ganancia.component.css']
+  templateUrl: './consultar-ganancia.component.html'
 })
 export class ConsultarGananciaComponent implements OnInit {
  

@@ -10,8 +10,7 @@ const LONGITUD_MINIMA_PERMITIDA_NUMERO = 1;
 
 @Component({
   selector: 'app-crear-movimiento',
-  templateUrl: './crear-movimiento.component.html',
-  styleUrls: ['./crear-movimiento.component.css']
+  templateUrl: './crear-movimiento.component.html'
 })
 export class CrearMovimientoComponent implements OnInit {
 
