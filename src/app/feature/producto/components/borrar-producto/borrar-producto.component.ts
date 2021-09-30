@@ -22,7 +22,7 @@ export class BorrarProductoComponent implements OnInit {
   }
 
   borrar() {
-    this.borrarProductoForm.value.id = parseInt(this.borrarProductoForm.value.id);
+    this.borrarProductoForm.value.id = parseInt(this.borrarProductoForm.value.id, 10);
     this.productoService.eliminar(this.borrarProductoForm.value).subscribe();
     alert('Registro Eliminado');
   }

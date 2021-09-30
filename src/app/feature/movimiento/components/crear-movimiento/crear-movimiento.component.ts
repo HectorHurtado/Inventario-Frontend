@@ -27,7 +27,7 @@ export class CrearMovimientoComponent implements OnInit {
   }
 
   guardar() {
-    this.movimientoForm.value.idProducto = parseInt(this.movimientoForm.value.idProducto);
+    this.movimientoForm.value.idProducto = parseInt(this.movimientoForm.value.idProducto,10);
     if(this.validarFormmulario()){
        this.movimientoServices.guardar(this.movimientoForm.value).subscribe();
        alert('Registro guardado');
