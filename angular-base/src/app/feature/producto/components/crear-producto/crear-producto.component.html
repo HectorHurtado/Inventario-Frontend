@@ -1,0 +1,18 @@
+<h1>Registrar Producto</h1>
+<form [formGroup]="productoForm">
+  <div class="mb-3">
+    <div>
+      <label class="form-label">Nombre:</label> <br>
+      <input class="form-control"  formControlName="nombre" validar type="text" id="nombre" name="nombre" placeholder="nombre"  style="display:inline; width: 300px;">
+    </div>
+    <div>
+      <label class="form-label">Precio Compra:</label><br>
+      <input class="form-control" formControlName="precioCompra"  validar type="number" id="precioCompra" name="precioCompra" placeholder="precioCompra"  style="display:inline; width: 300px;">
+    </div>
+    <div>
+      <label class="form-label">Stock:</label><br>
+      <input class="form-control" formControlName="stock"  validar type="number" id="stock" name="stock" placeholder="stock"  style="display:inline; width: 300px;"><br><br>
+    </div>
+    <button type="submit" id="registrar-producto" class="btn btn-primary" (click)="guardar()">Registrar</button>
+  </div>
+</form>

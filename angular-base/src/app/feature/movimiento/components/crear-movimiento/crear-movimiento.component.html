@@ -1,0 +1,30 @@
+<h1>Registrar Movimiento</h1>
+<form [formGroup]="movimientoForm">
+  <div class="mb-3">
+    <div>
+      <label class="form-label">Producto: </label> <br>
+      <select class="form-select"  style="display:inline; width: 300px;" id="idProducto" name="idProducto" aria-label="Default select example"  formControlName="idProducto">
+        <option *ngFor="let producto of listaProductos | async" 
+        [value]= "producto.id">
+        {{producto.nombre}}
+        </option>
+      </select> <br> <br>
+    </div>
+    <div>
+      <label class="form-label">Cantidad:</label><br>
+      <input class="form-control"  formControlName="cantidad" validar type="number" id="cantidad" name="cantidad" placeholder="Cantdad"  style="display:inline; width: 300px;">
+    </div>
+    <div>
+      <label class="form-label">Precio:</label><br>
+      <input class="form-control" formControlName="precioVenta"  validar type="number" id="precioVenta" name="precioVenta" placeholder="Precio"  style="display:inline; width: 300px;">
+    </div>
+    <div>
+      <label class="form-label">Fecha:  </label><br>
+      <input matInput [matDatepicker]="picker" id="fechaVenta" name="fechaVenta" class="form-control" formControlName="fechaVenta" style="display:inline; width: 300px;" (change)="changeDate($event)">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker><br><br>
+    </div>
+    <button type="submit" id="registrar-movimiento" class="btn btn-primary" (click)="guardar()">Registrar</button>
+  </div>
+</form>
+ 

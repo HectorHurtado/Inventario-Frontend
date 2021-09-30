@@ -1,0 +1,24 @@
+<div id="productos">
+    <table class="table table-striped" id="lista-productos">
+      <thead>
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Fecha Creacion</th>
+          <th scope="col">Precio Compra</th>
+          <th scope="col">Stock</th>
+          <th scope="col">Fecha Abastecimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let producto of listaProductos | async">
+          <th scope="row">{{producto.id}}</th>
+          <td>{{producto.nombre}}</td>
+          <td>{{producto.fechaCreacion}}</td>
+          <td>{{producto.precioCompra}}</td>
+          <td>{{producto.stock}}</td>
+          <td>{{producto.fechaAbastecimiento}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>

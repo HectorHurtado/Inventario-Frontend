@@ -1,0 +1,15 @@
+<h1>Borrar Producto</h1>
+<form [formGroup]="borrarProductoForm">
+  <div class="mb-3">
+    <div>
+        <label class="form-label">Producto: </label><br>
+        <select class="form-select"  style="display:inline; width: 300px;" id="id" name="id" aria-label="Default select example"  formControlName="id">
+          <option *ngFor="let producto of listaProductos | async" 
+          [value]= "producto.id">
+          {{producto.nombre}}
+          </option>
+        </select><br><br>
+      </div>
+    <button type="submit" id="eliminar-producto" class="btn btn-primary" (click)="borrar()">Eliminar</button>
+  </div>
+</form>

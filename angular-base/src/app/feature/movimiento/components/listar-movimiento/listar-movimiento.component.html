@@ -1,0 +1,22 @@
+<div id="movimientos">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Id Producto</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Precio Venta</th>
+          <th scope="col">Fecha Venta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movimiento of listaMovimientos | async">
+          <th scope="row">{{movimiento.id}}</th>
+          <td >{{movimiento.idProducto}}</td>
+          <td>{{movimiento.cantidad}}</td>
+          <td>{{movimiento.precioVenta}}</td>
+          <td>{{movimiento.fechaVenta}}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
